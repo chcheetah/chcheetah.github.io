@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>readscape – Stats</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fdfdfd;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #111;
+      animation: fadein 0.5s;
+
+    }
+      @keyframes fadein {
+        from { opacity: 0}
+        to   { opacity: 1}
+      }
+    .navbar {
+      padding: 1rem 2rem;
+    }
+    .navbar-brand, .nav-link {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .nav-link.active {
+      background-color: rgba(0,150,150, 0.3);
+      font-weight: 600;
+      
+      }
+      
+    .metric-block {
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .metric-number {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .metric-label {
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .goal-meter {
+      position: relative;
+      height: 10px;
+      background: #eee;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+    .goal-fill {
+      height: 100%;
+      background: #111;
+      border-radius: 5px;
+    }
+    h2 {
+      font-weight: 500;
+      color: #222;
+    }
+    .footer {
+      font-size: 0.8rem;
+      padding: 2rem 0;
+      color: #999;
+      text-align: center;
+    }
+      
+      .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid #ddd;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 56px;
+        z-index: 999;
+      }
+      .bottom-nav a {
+        color: #111;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.75rem;
+      }
+      .bottom-nav a.active {
+        font-weight: 600;
+        color: rgba(0,150,150);
+        font-size:1.1rem;
+
+
+      }
+
+  </style>
+</head>
+<body>
+    <!-- Navbar (hidden on small screens) -->
+    <nav class="navbar navbar-expand-lg d-none d-md-block">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">readscape</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="reading.html">My Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="discover.html">Discover</a></li>
+            <li class="nav-item"><a class="nav-link active" href="stats.html">Stats</a></li>
+            <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- Stats Section -->
+  <div class="container my-5">
+    <h2 class="mb-4">Your Reading Progress</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="metric-block">
+          <div class="metric-number">36</div>
+          <div class="metric-label">Books Read (of 50)</div>
+          <div class="goal-meter"><div class="goal-fill" style="width:72%"></div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="metric-block">
+          <div class="metric-number">14</div>
+          <div class="metric-label">Day Streak (of 30)</div>
+          <div class="goal-meter"><div class="goal-fill" style="width:47%"></div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="metric-block">
+          <div class="metric-number">32</div>
+          <div class="metric-label">Avg. Minutes (of 45)</div>
+          <div class="goal-meter"><div class="goal-fill" style="width:71%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer class="footer  d-none d-md-block">
+    <p>&copy; 2025 readscape — designed for stillness</p>
+  </footer>
+  
+  <!-- Add this just before </body> -->
+  <div class="bottom-nav d-md-none">
+    <a href="reading.html">
+      <i class="bi bi-journal-text"></i>
+      <span>Books</span>
+    </a>
+    <a href="discover.html">
+      <i class="bi bi-stars"></i>
+      <span>Discover</span>
+    </a>
+    <a href="index.html" class="">
+      <i class="bi bi-house-door"></i>
+      <span>Home</span>
+    </a>
+    <a href="stats.html" class="active">
+      <i class="bi bi-bar-chart"></i>
+      <span>Stats</span>
+    </a>
+    <a href="community.html">
+      <i class="bi bi-people"></i>
+      <span>Community</span>
+    </a>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

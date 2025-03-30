@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>readscape – My Books</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fdfdfd;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #111;
+      animation: fadein 0.5s;
+
+    }
+      @keyframes fadein {
+        from { opacity: 0}
+        to   { opacity: 1}
+      }
+    .navbar {
+      padding: 1rem 2rem;
+    }
+    .navbar-brand, .nav-link {
+      color: #111 !important;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+      .nav-link.active {
+        background-color: rgba(0,150,150, 0.3);
+        font-weight: 600;
+        
+        }
+        
+    .book-card img {
+      height: 180px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      border-radius: 0.3rem;
+    }
+    .book-card .card-body {
+      padding: 1rem 0;
+    }
+    .form-range {
+      accent-color: #444;
+    }
+    h2 {
+      font-weight: 500;
+      color: #222;
+    }
+    .footer {
+      font-size: 0.8rem;
+      padding: 2rem 0;
+      color: #999;
+      text-align: center;
+    }
+      
+      .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid #ddd;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 56px;
+        z-index: 999;
+      }
+      .bottom-nav a {
+        color: #111;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.75rem;
+      }
+      .bottom-nav a.active {
+        font-weight: 600;
+        color: rgba(0,150,150);
+        font-size:1.1rem;
+
+      }
+
+  </style>
+</head>
+<body>
+    <!-- Navbar (hidden on small screens) -->
+    <nav class="navbar navbar-expand-lg d-none d-md-block">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">readscape</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="reading.html">My Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="discover.html">Discover</a></li>
+            <li class="nav-item"><a class="nav-link" href="stats.html">Stats</a></li>
+            <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- Book Shelf Section -->
+  <div class="container my-5">
+    <h2 class="mb-4">Currently Reading</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card book-card p-2">
+          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87" class="card-img-top" alt="Book Cover">
+          <div class="card-body">
+            <h5>The Midnight Library</h5>
+            <p class="text-muted">40% · est. 2h left</p>
+            <input type="range" class="form-range" value="40">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card book-card p-2">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c" class="card-img-top" alt="Book Cover">
+          <div class="card-body">
+            <h5>Atomic Habits</h5>
+            <p class="text-muted">70% · est. 1h left</p>
+            <input type="range" class="form-range" value="70">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 readscape — designed for stillness</p>
+  </footer>
+  
+  <!-- Add this just before </body> -->
+  <div class="bottom-nav d-md-none">
+    <a href="reading.html" class="active">
+      <i class="bi bi-journal-text"></i>
+      <span>Books</span>
+    </a>
+    <a href="discover.html">
+      <i class="bi bi-stars"></i>
+      <span>Discover</span>
+    </a>
+    <a href="index.html" class="">
+      <i class="bi bi-house-door"></i>
+      <span>Home</span>
+    </a>
+    <a href="stats.html">
+      <i class="bi bi-bar-chart"></i>
+      <span>Stats</span>
+    </a>
+    <a href="community.html">
+      <i class="bi bi-people"></i>
+      <span>Community</span>
+    </a>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
